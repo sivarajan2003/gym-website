@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liftline - Webflow HTML website template</title>
+  <meta name="description" content="Liftline advanced static clone with multiple animations for intern project" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="challenge.css" /> <!-- NEW CSS FOR CHALLENGE SECTION -->
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="logo">Liftline</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#classes" class="nav-link">Classes</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#locations" class="nav-link">Locations</a>
+      </nav>
+
+      <div class="cta">
+        <button class="btn btn-primary">Join Today</button>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#locations">Locations</a>
+      <a class="btn btn-primary" href="#pricing">Join</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <img class="hero-bg" src="image/gy1.jpg"
+      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554284126-80f95e8f9a5d?auto=format&fit=crop&w=2000&q=80'" alt="Hero background">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow reveal slide-up delay-1">Liftline — serious training, real transformation...</p>
+
+        <h1 class="hero-title reveal rotate delay-3">
+          UNLEASH YOUR <br> POTENTIAL
+        </h1>
+
+        <p class="hero-desc reveal blur delay-3">
+          Classes, coaches, and space designed to make progress the standard.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary reveal scale-up delay-4">Start Explore</button>
+          <button class="btn btn-outline reveal slide-right delay-4">See Classes</button>
+        </div>
+
+        <div class="members-badge reveal slide-right delay-5">
+          <img class="avatar" src="image/hero_testi_1.webp">
+          <img class="avatar" src="image/hero_testi_2.webp">
+          <div class="members-info">
+            <strong>2k+ Members</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal float delay-3">
+        <div class="hero-media">
+          <!--<img src="images/hero.jpg" alt="gym">-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED -->
+  <section class="trusted">
+    <div class="container">
+      <div class="trusted-row reveal slide-up delay-2">
+        <p class="trusted-text">Trusted by Communities:</p>
+        <div class="trusted-logos">
+          <img src="image/sum.svg">
+          <img src="image/logo.svg">
+          <img src="image/qc.svg">
+          <img src="image/xr.svg">
+        </div>
+        <span class="and-more">and more</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="about-side reveal slide-left delay-1">
+        <h4 class="muted-eyebrow">(ABOUT)</h4>
+      </div>
+      <div class="about-main reveal slide-up delay-2">
+        <h2>Liftline is built for those who train with purpose Liftline is built for those who train with purpose. We're not just reps and routines — we’re a team, a mindset, and a space where progress is the standard. Show up, push hard, and grow stronger. Every day.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee">
+    <div class="marquee-wrap">
+      <div class="marquee-inner">WE DON'T DO AVERAGE × WE DON'T DO AVERAGE × WE DON'T DO AVERAGE ×</div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features">
+    <div class="container">
+
+    <!--  <div class="feature reverse reveal slide-up delay-2">
+        <div class="feature-media">
+          <img src="image/ex_1.webp">
+        </div>
+        <div class="feature-body">
+          <h3>Expert Coaches</h3>
+          <p class="muted">Programs designed for measurable progress.</p>
+          <div class="accent-line"></div>
+          <h4>Community That Pushes</h4>
+          <p>Effective routines tested in the real world.</p>
+        </div>
+        <div class="feature-index">01</div>
+      </div> -->
+   
+
+        <!-- CARD 1 -->
+       <!-- <div class="feature-card fade-in">
+            <img src="image/ex_1.webp">
+            <div class="feature-content">
+                <h2>Expert Coaches</h2>
+                <p>Certified pros who train smart and push hard — with you, not above you.</p>
+                <div class="line"></div>
+                <h3>High Intensity Classes</h3>
+                <p>Sweat-dripping, heart-pounding workouts that keep you coming back.</p>
+            </div>
+            <span class="index">01</span>
+        </div> -->
+        <!-- Card 2 (reverse layout) -->
+      <div class="feature reverse reveal slide-up delay-2">
+        <div class="feature-media">
+          <img src="image/ex_1.webp" alt="coach" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80';">
+        </div>
+        <div class="feature-body">
+          <h3>Expert Coaches</h3>
+          <p class="muted">Programs designed for measurable progress and real results.</p>
+          <div class="accent-line"></div>
+          </div>
+        <div class="feature-index">01</div>
+      </div>
+        
+    
+      <!-- Card 2 (reverse layout) -->
+      <div class="feature reverse reveal slide-up delay-2">
+        <div class="feature-media">
+          <img src="image/ex2.webp" alt="coach" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80';">
+        </div>
+        <div class="feature-body">
+          <h3>High Intensity Classes</h3>
+          <p class="muted">Sweat-dripping, heart-pounding workouts that keep you coming back.</p>
+          <div class="accent-line"></div>
+          
+        </div>
+        <div class="feature-index">02</div>
+      </div>
+      <div class="feature reverse reveal slide-up delay-2">
+        <div class="feature-media">
+          <img src="image/ex4.webp" alt="coach" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80';">
+        </div>
+        <div class="feature-body">
+          <h3>Goal Oriented Training</h3>
+          <p class="muted">Whether it’s weight loss or muscle gain. We train with a plan.</p>
+          <div class="accent-line"></div>
+          </div>
+        <div class="feature-index">03</div>
+      </div>
+        
+      <!-- Card 2 (reverse layout) -->
+      <div class="feature reverse reveal slide-up delay-2">
+        <div class="feature-media">
+          <img src="image/ex3.webp" alt="coach" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80';">
+        </div>
+        <div class="feature-body">
+          <h3>Community That Pushes</h3>
+          <p class="muted">Effective routines tested in the real world — not just made for Instagram.</p>
+          <div class="accent-line"></div>
+          
+        </div>
+        <div class="feature-index">03</div>
+      </div>
+     
+    </div>
+
+
+    </div>
+  </section>
+
+
+<!--  ADDED "CHOOSE YOUR CHALLENGE" SECTION  -->
+
+<section id="classes" class="challenge-section">
+    <div class="container">
+  
+      <p class="challenge-eyebrow">(CLASSES)</p>
+  
+      <h1 class="challenge-title">Choose Your Challenge</h1>
+  
+      <p class="challenge-subtitle">
+        From sweat-dripping cardio to raw strength and technique — pick your grind and go all in.
+      </p>
+      </div>
+  
+    <div class="challenge-card-container">
+        <div class="challenge-card black-reveal">
+      
+        <img src="image/hit_1.webp" alt="HIIT Rush">
+        <div class="challenge-content">
+          <h2>HIIT RUSH</h2>
+          <p>Burn fat, move fast, and leave nothing in the tank.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card black-reveal">
+        <img src="image/com_1.webp" alt="Combat Line">
+        <div class="challenge-content">
+          <h2>COMBATLINE</h2>
+          <p>Master raw power, strategy, and skill.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card black-reveal">
+        <img src="image/power.webp" alt="Powerlift">
+        <div class="challenge-content">
+          <h2>POWERLIFT</h2>
+          <p>Build strength and technique with every rep.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card black-reveal">
+        <img src="image/zen.webp" alt="Zen Flow">
+        <div class="challenge-content">
+          <h2>ZEN FLOW</h2>
+          <p>Center your mind and body through flexibility.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="transform-section" id="stories">
+    <div class="container transform-wrapper">
+  
+      <h2 class="transform-title">Transformation <br> Stories</h2>
+  
+      <div class="transform-content">
+  
+        <!-- LEFT IMAGE -->
+        <div class="transform-image">
+          <img id="transform-img" src="image/jon.webp" alt="Transformation">
+        </div>
+        
+  
+        <!-- RIGHT SLIDE CONTENT -->
+        <div class="transform-text">
+          <div class="quote-icon">❝❞</div>
+  
+          <p id="transform-quote" class="quote">
+            When I first joined, I couldn’t even do a proper push-up. Now I’m hitting triple digits on deadlifts. 
+            The coaching is next level, and they take time to teach you the ‘why’ behind everything. 
+            Liftline turned me from a total beginner into someone who walks into the gym with confidence.
+          </p>
+  
+          <div id="transform-author" class="author">— Jonathan R, 20</div>
+  
+          <!-- NAVIGATION -->
+          <div class="transform-nav">
+            <button class="nav-btn" id="prevSlide">←</button>
+            <button class="nav-btn" id="nextSlide">→</button>
+          </div>
+        </div>
+        
+  
+      </div>
+    </div>
+  </section>
+  
+    <div class="pricing-section">
+        <h1>Plans That Fit Your Hustle</h1>
+        <p>Whether you're testing the waters or going all in, we've got a plan that fits your grind.</p>
+        <div class="pricing-cards">
+            <div class="pricing-card starter">
+                <h2>Starter</h2>
+                <p class="price">$15/month</p>
+                <p class="description">Newcomers who want full class access, no pressure.</p>
+                <ul>
+                    <li>Unlimited access to all group classes</li>
+                    <li>Open gym during staffed hours</li>
+                    <li>One free fitness assessment</li>
+                    <li>Locker & shower access</li>
+                    <li>5% discount on merch</li>
+                </ul>
+                <button>Start Now</button>
+            </div>
+            <div class="pricing-card pro popular">
+                <h2>Pro</h2>
+                <p class="price">$25/month</p>
+                <p class="description">Regulars who want better perks and personalized support.</p>
+                <ul>
+                    <li>Everything in Starter Plan</li>
+                    <li>2 Personal Training sessions/month</li>
+                    <li>Priority class booking</li>
+                    <li>Free monthly body scan</li>
+                    <li>10% discount on merch & supplements</li>
+                </ul>
+                <button>Start Now</button>
+            </div>
+            <div class="pricing-card elite">
+                <h2>Elite</h2>
+                <p class="price">$40/month</p>
+                <p class="description">Newcomers who want full class access, no pressure.</p>
+                <ul>
+                    <li>Everything in Pro Plan</li>
+                    <li>Unlimited personal training</li>
+                    <li>Premium locker</li>
+                    <li>Early access to events & challenges</li>
+                    <li>20% off all products</li>
+                </ul>
+                <button>Start Now</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- ================= LOCATION SECTION ================= -->
+        <section class="location-section">
+            <div class="map-container">
+                <!-- Google Map Embed -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4611491906506!2d106.822!3d-6.200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMDAuMCJTIDEwNsKwNDknMTkuMCJF!5e0!3m2!1sen!2sid!4v1700000000000"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        
+            <div class="location-text">
+                <h2>Locate Us</h2>
+                <p>Come feel the energy yourself. We’re located right in the heart of the city, easy to reach, hard to forget.</p>
+        
+                <!-- Accordion List -->
+                <div class="accordion">
+        
+                    <!-- JAKARTA -->
+                    <div class="accordion-item">
+                        <button class="accordion-header active">
+                            <span>Jakarta</span>
+                            <span class="icon">−</span>
+                        </button>
+                        <div class="accordion-content open">
+                           <ol>
+                               <li><b>Liftline SCBD</b><br>
+                                   Jl. Jend. Sudirman Kav. 52–53, SCBD, Jakarta Selatan<br>
+                                   <a href="tel:08121111234">0812-1111-1234</a>
+                               </li>
+                               <br>
+                               <li><b>Liftline Kelapa Gading</b><br>
+                                   Jl. Boulevard Barat Raya No. 5, Kelapa Gading, Jakarta Utara<br>
+                                   <a href="tel:081211115678">0812-1111-5678</a>
+                               </li>
+                           </ol>
+                        </div>
+                    </div>
+        
+                    <!-- BANDUNG -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Bandung</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Coming soon...</p>
+                        </div>
+                    </div>
+        
+                    <!-- SURABAYA -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Surabaya</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Coming soon...</p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= CONTACT SECTION ================= -->
+        <section class="contact-section">
+            <div class="contact-info">
+                <h3>1234-5678</h3>
+                <h2>info@liftline.com</h2>
+            </div>
+        
+            <form class="contact-form">
+                <label>Name*</label>
+                <input type="text" placeholder="Enter your name">
+        
+                <label>Phone Number*</label>
+                <input type="text" placeholder="Enter your number">
+        
+                <label>Message</label>
+                <textarea placeholder="Enter your message"></textarea>
+        
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+        
+        <!-- ================= GET IN TOUCH SECTION ================= -->
+        <title>Liftline Contact Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- =============================== -->
+<!--         GET IN TOUCH SECTION    -->
+<!-- =============================== -->
+<section class="getintouch-section">
+
+    <!-- TOP CONTACT BAR -->
+    <div class="top-row">
+        <div class="top-left">
+            <div class="phone">1234-5678</div>
+            <div class="email">info@liftline.com</div>
+        </div>
+
+        <div class="top-right">
+            <span>We’ll reach you fast</span>
+            <button class="submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <!-- IMAGE + TITLE ON SAME ROW -->
+    <div class="middle-row">
+        <img src="image/get.webp"
+             class="contact-image">
+
+        <h1 class="big-title">GET IN TOUCH</h1>
+    </div>
+
+</section>
+        
+        
+        <!-- ================= FOOTER ================= -->
+        <footer>
+           <div class="footer-logo">Liftline</div>
+           <p>©2025 Liftline • Powered by Webflow • License</p>
+        
+           <div class="footer-links">
+               <a href="#">About</a>
+               <a href="#">Classes</a>
+               <a href="#">Pricing</a>
+               <a href="#">Locations</a>
+               <a href="#">Contact</a>
+           </div>
+        </footer>
+        
+        
+    
+    <script src="script.js"></script>
+</body>
+
+  
+  
+
+<!-- END CHALLENGE SECTION -->
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="brand-sm">
+          <div class="logo small">Liftline</div>
+          <div class="copyright">
+            © <span id="year"></span> Liftline
+          </div>
+        </div>
+
+        <nav class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
