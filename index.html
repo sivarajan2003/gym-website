@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Liftline - Hero (Right-side Headline)</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- NAV -->
@@ -45,16 +47,16 @@
     <!-- HERO -->
     <main class="hero" id="home">
       <!-- background image: change hero.jpg to your file -->
-      <div class="hero-bg">
+      <div class="new-hero-bg">
   
       <div class="hero-overlay"></div>
   
-      <div class="container hero-inner">
+      <div class="new-hero-inner">
         <!-- LEFT COLUMN: eyebrow, paragraph, member pill -->
         <div class="hero-left">
   
           <p class="hero-desc">
-            <strong>Liftline</strong> — a space built for serious training, real 
+            Liftline — a space built for serious training, real 
             transformation, and a community that pushes each other to rise higher 
             every single day.
           </p>
@@ -64,7 +66,7 @@
             <img class="avatar" src="image/hero_testi_1.webp" alt="">
             
             <div class="members-info">
-              <strong>2k+ Members</strong>
+              <p>2k+ Members</p>
               <div class="stars">★★★★★</div>
             </div>
           </div>
@@ -75,8 +77,7 @@
         <!-- RIGHT COLUMN: large headline, note, CTA -->
         <div class="hero-right">
           <h1 class="hero-title reveal rotate delay-3">
-            <span class="break">UNLEASH</span><br>
-            <span class="break">YOUR</span><br>
+            <span class="break">UNLEASH YOUR</span><br>
             <span class="break">POTENTIAL</span>
           </h1>
   
@@ -88,73 +89,60 @@
       </div>
     </main>
 
-  <!-- TRUSTED -->
   <section class="trusted">
-    <div class="container">
-      <div class="trusted-row reveal slide-up delay-2">
-        <p class="trusted-text">Trusted by Communities:</p>
-        <div class="trusted-logos">
-          <img src="image/sum.svg">
-          <img src="image/logo.svg">
-          <img src="image/qc.svg">
-          <img src="image/xr.svg">
-        </div>
-        <span class="and-more">and more</span>
+  <div class="container">
+    <div class="trusted-row reveal slide-up delay-2">
+      <p class="trusted-text">Trusted by Communities:</p>
+
+      <div class="trusted-logos">
+        <img src="image/sum.svg">
+        <img src="image/clear.svg">
+        <img src="image/qc.svg">
+        <img src="image/logo.svg">
       </div>
+
+      <div class="logos-text">and more</div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- ABOUT -->
-  <section id="about" class="about">
+  <section class="about">
     <div class="container about-grid">
-      <div class="about-side reveal slide-left delay-1">
-        <h4 class="muted-eyebrow">(ABOUT)</h4>
-      </div>
-      <div class="about-main reveal slide-up delay-2">
-        <h2>Liftline is built for those who train with purpose Liftline is built for those who train with purpose. We're not just reps and routines — we’re a team, a mindset, and a space where progress is the standard. Show up, push hard, and grow stronger. Every day.</h2>
-      </div>
+  
+        <div class="muted-eyebrow">(ABOUT)</div>
+  
+        <div class="about-main">
+          <p class="about-text">
+            Liftline is built for those who train with purpose. We're not just reps and routines —
+            we’re a team, a mindset, and a space where progress is the standard.
+            Show up, push hard, and grow stronger. Every day.
+          </p>
+        </div>
+  
     </div>
   </section>
+  
 
-  <!-- MARQUEE -->
-  <section class="marquee">
+  <div class="marquee">
     <div class="marquee-wrap">
-      <div class="marquee-inner">WE DON'T DO AVERAGE × WE DON'T DO AVERAGE × WE DON'T DO AVERAGE ×</div>
+      <div class="marquee-inner">
+        WE DON'T DO AVERAGE × WE DON'T DO AVERAGE × WE DON'T DO AVERAGE
+      </div>
+  
+      <!-- duplicate for perfect infinite loop -->
+      <div class="marquee-inner">
+        WE DON'T DO AVERAGE × WE DON'T DO AVERAGE × WE DON'T DO AVERAGE
+      </div>
     </div>
-  </section>
+  </div>
+  
 
   <!-- FEATURES -->
   <section id="features" class="features">
     <div class="container">
-
-    <!--  <div class="feature reverse reveal slide-up delay-2">
-        <div class="feature-media">
-          <img src="image/ex_1.webp">
-        </div>
-        <div class="feature-body">
-          <h3>Expert Coaches</h3>
-          <p class="muted">Programs designed for measurable progress.</p>
-          <div class="accent-line"></div>
-          <h4>Community That Pushes</h4>
-          <p>Effective routines tested in the real world.</p>
-        </div>
-        <div class="feature-index">01</div>
-      </div> -->
-   
-
-        <!-- CARD 1 -->
-       <!-- <div class="feature-card fade-in">
-            <img src="image/ex_1.webp">
-            <div class="feature-content">
-                <h2>Expert Coaches</h2>
-                <p>Certified pros who train smart and push hard — with you, not above you.</p>
-                <div class="line"></div>
-                <h3>High Intensity Classes</h3>
-                <p>Sweat-dripping, heart-pounding workouts that keep you coming back.</p>
-            </div>
-            <span class="index">01</span>
-        </div> -->
-        <!-- Card 2 (reverse layout) -->
+        
       <div class="feature reverse reveal slide-up delay-2">
         <div class="feature-media">
           <img src="image/ex_1.webp" alt="coach" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80';">
@@ -289,6 +277,7 @@
           </p>
   
           <div id="transform-author" class="author">— Jonathan R, 20</div>
+          
   
           <!-- NAVIGATION -->
           <div class="transform-nav">
