@@ -9,8 +9,11 @@
   <body>
     <!-- NAV -->
     <header class="navbar">
-      <div class="nav-inner container">
-        <div class="brand"><span class="logo">Liftline</span></div>
+      <div class="nav-inner">
+        <div class="brand">
+          <img class="logo-img" src="image/logo (2).png" alt="Liftline Logo">
+        </div>
+        
   
         <nav class="nav-links" aria-label="Primary">
           <a href="#about">About</a>
@@ -20,7 +23,9 @@
         </nav>
   
         <div class="cta">
-          <button class="btn btn-primary">Join Today</button>
+          <!--<button class="btn btn-primary">Join Today</button>-->
+          <a href="#contact" class="btn btn-primary">Join Today</a>
+
         </div>
   
         <button class="hamburger" aria-label="Toggle menu" data-open="false">
@@ -40,29 +45,32 @@
     <!-- HERO -->
     <main class="hero" id="home">
       <!-- background image: change hero.jpg to your file -->
-      <img class="hero-bg" src="image/gy1.jpg" alt="hero background" />
+      <div class="hero-bg">
   
       <div class="hero-overlay"></div>
   
       <div class="container hero-inner">
         <!-- LEFT COLUMN: eyebrow, paragraph, member pill -->
         <div class="hero-left">
-          <p class="eyebrow reveal slide-up">Liftline — serious training, real transformation...</p>
-
-          <p class="hero-desc reveal slide-up delay-1">
-            A space built for serious training, real transformation...
-          </p>
-          
   
-          <div class="members-badge reveal slide-up delay-2">
-            <img class="avatar" src="image/hero_testi_1.webp" alt="member 1" onerror="this.src='https://images.unsplash.com/photo-1545996124-8125d8b8f4f2?q=80&w=200'">
-            <img class="avatar" src="image/hero_testi_2.webp" alt="member 2" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200'">
+          <p class="hero-desc">
+            <strong>Liftline</strong> — a space built for serious training, real 
+            transformation, and a community that pushes each other to rise higher 
+            every single day.
+          </p>
+        
+          <div class="members-badge">
+            <img class="avatar" src="image/hero_testi_2.webp" alt="">
+            <img class="avatar" src="image/hero_testi_1.webp" alt="">
+            
             <div class="members-info">
               <strong>2k+ Members</strong>
               <div class="stars">★★★★★</div>
             </div>
           </div>
+        
         </div>
+        
   
         <!-- RIGHT COLUMN: large headline, note, CTA -->
         <div class="hero-right">
@@ -409,7 +417,9 @@
         </section>
         
         <!-- ================= CONTACT SECTION ================= -->
-        <section class="contact-section">
+        <!--<section class="contact-section">-->
+          <section id="contact" class="contact-section">
+
             <div class="contact-info">
                 <h3>1234-5678</h3>
                 <h2>info@liftline.com</h2>
