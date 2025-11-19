@@ -1,88 +1,59 @@
-/* script.js
-   - Mobile nav toggle
-   - IntersectionObserver reveal (variants + stagger)
-   - Hero subtle parallax on mouse move
-   - Set current year in footer
-*/
-
+// Mobile nav toggle + IntersectionObserver reveal + subtle hero parallax
 document.addEventListener('DOMContentLoaded', () => {
-    // mobile nav
-    const hamburger = document.querySelector('.hamburger');
-    const mobileNav = document.querySelector('.mobile-nav');
-    hamburger && hamburger.addEventListener('click', () => {
-      const open = mobileNav.getAttribute('aria-hidden') === 'false';
-      mobileNav.setAttribute('aria-hidden', String(!open));
-      mobileNav.style.display = open ? 'none' : 'block';
-      hamburger.classList.toggle('open');
+  // Mobile nav toggle
+  const hamb = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+  hamb && hamb.addEventListener('click', () => {
+    const open = mobileNav.getAttribute('aria-hidden') === 'false';
+    mobileNav.setAttribute('aria-hidden', String(!open));
+    mobileNav.style.display = open ? 'none' : 'block';
+    hamb.classList.toggle('open');
+  });
+
+  // IntersectionObserver for reveal animations
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // add show (staggered by CSS delay classes)
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      }
     });
-  
-    // IntersectionObserver for reveal animations
-    const reveals = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target); // reveal once
-        }
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Staggered reveal for hero title + actions (explicitly)
+  const title = document.querySelector('.hero-title');
+  const actions = document.querySelector('.hero-actions');
+  if (title) {
+    setTimeout(() => title.classList.add('show'), 420); // headline appears after small delay
+    setTimeout(() => actions.classList.add('show'), 620);
+  }
+
+  // subtle mouse parallax for hero background (desktop)
+  const bg = document.querySelector('.hero-bg');
+  if (bg && window.innerWidth > 900) {
+    let scale = 1.02;
+    let raf = null;
+    document.addEventListener('pointermove', (e) => {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const px = (e.clientX / window.innerWidth - 0.5) * 18;
+        const py = (e.clientY / window.innerHeight - 0.5) * 8;
+        bg.style.transform = `translate(${px}px, ${py}px) scale(${scale})`;
       });
-    }, {
-      threshold: 0.18,
-      rootMargin: '0px 0px -10% 0px'
     });
-  
-    reveals.forEach(el => obs.observe(el));
-  // Black to color reveal
-const blackReveal = document.querySelectorAll(".black-reveal");
 
-function showBlackReveal() {
-  blackReveal.forEach((el) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 120) {
-      el.classList.add("active");
-    }
-  });
-}
+    // slow auto-breathe
+    setInterval(() => {
+      scale = scale === 1.02 ? 1.028 : 1.02;
+      bg.style.transition = 'transform 5s ease';
+      bg.style.transform = `scale(${scale})`;
+    }, 6000);
+  }
+});
 
-window.addEventListener("scroll", showBlackReveal);
-showBlackReveal();
-
-    // Hero parallax / subtle movement for media
-    const heroBg = document.querySelector('.hero-bg');
-    const heroMediaImg = document.querySelector('.hero-media img');
-    window.addEventListener('mousemove', (e) => {
-      const x = (e.clientX - window.innerWidth / 2) / 80;
-      const y = (e.clientY - window.innerHeight / 2) / 120;
-      if (heroBg) heroBg.style.transform = `translate(${x}px, ${y}px) scale(1.03)`;
-      if (heroMediaImg) heroMediaImg.style.transform = `translate(${x/1.5}px, ${y/1.2}px) scale(1.01)`;
-    });
-    window.addEventListener('mouseleave', () => {
-      if (heroBg) heroBg.style.transform = '';
-      if (heroMediaImg) heroMediaImg.style.transform = '';
-    });
-  
-    // Set footer year
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-  });
-  
-  // Transformation section slider
-const slides = [
-    {
-      img: "image/jon.webp",
-      quote: "When I first joined, I couldn’t even do a proper push-up. Now I’m hitting triple digits on deadlifts. The coaching is next level, and they take time to teach you the ‘why’ behind everything. Liftline turned me from a total beginner into someone who walks into the gym with confidence.",
-      author: "— Jonathan R, 20"
-    },
-    {
-      img: "image/simon.webp",
-      quote: "I’ve been to a few gyms before, but nothing compares to the energy of Liftline’s MMA sessions. It’s not just about fighting — it’s skill, endurance, mindset. I come out drenched and smiling every time. It’s therapy with gloves on.",
-      author: "— Simon S, 26"
-    },
-    {
-      img: "image/688aec964122c176c83fd9db_testi_2.webp",
-      quote: "I work long hours and was burned out. Joining PulseFit reminded me what it feels like to challenge myself physically and mentally. The Pro plan with monthly PT was the best investment I made for myself this year.",
-      author: "— Clara F, 22"
-    }
-  ];
   
   let currentSlide = 0;
   
